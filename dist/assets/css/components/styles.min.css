@@ -1,0 +1,2 @@
+.label_radio{position:relative;padding-left:23px;margin-right:auto;transition:color .35s}.checkmark{position:absolute;opacity:0}.check-mark{position:absolute;left:2px;top:50%;transform:translateY(-50%);width:7px;height:7px;background-color:#161926;border:2px solid #161926;box-shadow:0 0 2px #161926;border-radius:50%;transition:background-color .3s}.checkmark:checked+.check-mark{background-color:#fff;box-shadow:0 0 0 2px #fff}.checkmark:checked~.label.label_radio{color:#fff}
+/*# sourceMappingURL=styles.min.css.map */
