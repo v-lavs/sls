@@ -1,0 +1,142 @@
+.section-about {
+  padding-bottom: 140px;
+
+  .part_left {
+    background-image: url(./../../images/statistic-image.jpg);
+    min-height: 680px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .part_right {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .our-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 48.62%;
+    padding: 42px 18px;
+
+    &__item {
+      position: relative;
+      padding-bottom: 51px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 82px;
+        height: 1px;
+        background-color: var(--color-secondary);
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+
+  .number {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 68px;
+    font-family: var(--secondary-font);
+    line-height: 1.06;
+    margin-bottom: 12px;
+  }
+
+  .description {
+    width: 51.38%;
+    padding: 54px 11px 110px 18px;
+
+    > p + p {
+      margin-bottom: 0;
+    }
+  }
+
+  .dollars {
+    font-weight: 400;
+    font-size: 40px;
+    font-family: var(--secondary-font);
+    line-height: 1;
+    color: #E4E4E4;
+  }
+
+  .btn_main {
+    margin-top: 40px;
+  }
+
+  @include respond-to($lg) {
+    .dollars {
+      font-size: 30px;
+    }
+    .number {
+      font-size: 50px;
+    }
+  }
+
+  @include respond-to($md) {
+    .our-progress {
+      width: 45%;
+      padding-top: 54px;
+      padding-bottom: 54px;
+      &__item{
+        padding-bottom: 51px;
+      }
+    }
+    .description {
+      width: 55%;
+    }
+    padding-bottom: 85px;
+    .dollars {
+      font-size: 30px;
+    }
+    .number {
+      font-size: 33px;
+    }
+    .dollars {
+      font-size: 20px;
+    }
+  }
+  @include respond-to($xs){
+    .part_left{
+      display: none;
+    }
+    .part_right{
+      padding: 0;
+    }
+    .our-progress,
+    .description{
+      width: 100%;
+      padding-bottom: 0;
+    }
+    .our-progress__item{
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      &:last-child{
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include respond-to($xxs){
+    .description{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

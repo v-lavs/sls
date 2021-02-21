@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 0;
+  &__item {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+    margin-left: 32px;
+    transition: color .35s;
+&:hover,
+&:focus{
+  color: var(--color-secondary);
+}
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+}

@@ -1,0 +1,147 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 31px;
+  width: 100%;
+  padding: 24px 64px;
+  background: linear-gradient(270deg, rgba(var(--rgba-bg), 0.5) 0%,
+          rgba(var(--rgba-bg), 0.244636) 24.1%,
+          rgba(var(--rgba-bg), 0) 47.19%),
+  rgba(var(--rgba-bg), 0.02);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  z-index: 800;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__nav {
+    margin-left: auto;
+    align-items: center;
+    display: flex;
+
+    &.open-menu {
+      transform: translateX(0);
+    }
+  }
+
+  .btn_close {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+
+    .icon-close {
+      width: 100%;
+      height: auto;
+      fill: var(--color-primary);;
+    }
+  }
+
+  .btn_burger {
+    border: none;
+    background-color: transparent;
+    display: none;
+    width: 24px;
+    height: 30px;
+    padding: 3px;
+    margin-left: 20px;
+
+    .line {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin-bottom: 6px;
+      background-color: var(--color-primary);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .toggle-theme {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 1px;
+    padding: 7px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--btn-toggle-bg);
+
+    &__bg {
+      width: 18px;
+      height: 18px;
+      background-image: var(--swicher);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center center;
+    }
+  }
+
+  &__logo-site {
+    display: inline-block;
+    max-width: 93px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+
+  @include respond-to($lg) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include respond-to($md) {
+    padding-left: 20px;
+    padding-right: 20px;
+    .btn_close,
+    .btn_burger {
+      display: block;
+    }
+    .toggle-theme {
+      margin-left: auto;
+    }
+    .header__nav {
+      padding: 140px 20px 150px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: -31px;
+      bottom: 0;
+      flex-direction: column;
+      background-color: var(--bg-primary);
+      height: 100vh;
+      overflow-y: auto;
+      text-align: center;
+      transition: transform .5s;
+      transform: translateX(-100%);
+      z-index: 999;
+
+      .menu {
+        flex-direction: column;
+
+        &__item {
+          padding: 10px 0;
+          margin: 0 0 25px 0;
+        }
+      }
+    }
+  }
+  @include respond-to($xs){
+    top: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}

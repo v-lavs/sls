@@ -1,0 +1,12 @@
+.section__title{
+  font-family: $secondary-font;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.section__title,
+.capabilities__title{
+  span{
+    font-style: italic;
+  }
+}

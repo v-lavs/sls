@@ -1,0 +1,47 @@
+.section-capabilities {
+  .capabilities {
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    margin-bottom: 4px;
+
+    &__item {
+      position: relative;
+      width: 50%;
+      padding: 32px 43px 136px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        height: 1px;
+        width: calc(100% - 86px);
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--light-gray);
+      }
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      font-family: var(--secondary-font);
+    }
+  }
+  @include respond-to($md){
+    .capabilities__item{
+      padding-bottom: 85px;
+    }
+  }
+  @include respond-to($xs){
+    .capabilities__item{
+      width: 100%;
+      padding-bottom: 65px;
+    }
+  }
+  @include respond-to($xxs){
+    .capabilities__item{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

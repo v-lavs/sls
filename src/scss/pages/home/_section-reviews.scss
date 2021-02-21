@@ -1,0 +1,131 @@
+.section-reviews {
+  padding-top: 150px;
+  padding-bottom: 198px;
+
+  .sub-title {
+    margin-bottom: 60px;
+  }
+
+  .part_left {
+    position: relative;
+    width: 34%;
+    max-width: 391px;
+    flex-shrink: 0;
+    padding-right: 60px;
+    padding-left: 2px;
+  }
+
+  .block-nav-slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 60px;
+  }
+
+  .slider-review {
+    &__content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .swiper-slide {
+      max-width: 468px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      -webkit-background-size: cover;
+      background-size: cover;
+      height: auto;
+      color: rgba(255, 255, 255, .8);
+      font-weight: 400;
+      padding: 51px 48px 48px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        background: rgba(25, 28, 41, 0.7);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 0;
+      }
+    }
+
+    .text-review {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+
+    }
+
+    .author {
+      font-family: $secondary-font;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+    }
+  }
+
+  @include respond-to($lg) {
+    padding-bottom: 150px;
+    .block-nav-slider {
+      right: 40px;
+      bottom: 20px;
+    }
+    .slider-review {
+      .swiper-slide {
+        //max-width: 420px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+
+  @include respond-to($md) {
+    padding-bottom: 100px;
+    .part_left {
+      padding-right: 30px;
+    }
+    .slider-review {
+      .swiper-slide {
+        //max-width: 390px;
+      }
+
+      .text-review {
+        font-size: 14px;
+      }
+
+      .author {
+        font-size: 18px;
+      }
+    }
+  }
+  @include respond-to($sm) {
+    padding-top: 50px;
+    .container {
+      flex-wrap: wrap;
+    }
+    .part_left {
+      width: 100%;
+      max-width: initial;
+      padding-bottom: 30px;
+      padding-right: 0;
+    }
+    .block-nav-slider {
+      right: 0;
+    }
+
+  }
+  @include respond-to($xs) {
+    .slider-review .swiper-slide {
+      padding: 40px 20px 25px;
+      //max-width: 350px;
+    }
+
+  }
+}
+
+
+

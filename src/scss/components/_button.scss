@@ -1,0 +1,59 @@
+.btn {
+  display: inline-block;
+  border: none;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  background-color: transparent;
+  padding: 5px 0;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--btn-color);
+
+  &:hover,
+  &:focus {
+    span:before {
+      width: 0;
+    }
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      left: 10px;
+      bottom: -4px;
+      width: 100%;
+      top: 0;
+      z-index: 0;
+      background: linear-gradient(to bottom, transparent 38%, rgba(var(--rgba-btn-color), .3) 38%);
+      padding-bottom: .25em;
+      transition: .35s;
+    }
+  }
+  &_border {
+    padding: 1.944em 2.056em 1.944em 1.667em;
+    text-align: center;
+    border: 1px solid var(--light-gray);
+  }
+  @include respond-to($lg){
+    font-size: 18px;
+    &_border {
+      padding-top: 1.7em;
+    }
+  }
+  @include respond-to($md){
+    font-size: 16px;
+    .btn_border {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+  }
+}

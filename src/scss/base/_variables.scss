@@ -1,0 +1,69 @@
+:root {
+  --dark-blue: #262A3F;
+  --dark: #161926;
+  --dark-blue-rgba:38, 42, 63;
+  --bg-border-input: 38, 42, 63;
+  --white-rgba: 255, 255, 255;
+  --rgba-bg: 255, 255, 255;
+  --white: #ffffff;
+  --light-green: #85BBB1;
+  --light-blue: #689FF2;
+
+
+  --aquamarin: #53F3CD;
+  --coral: #F1897B;
+  --light-gray: #E4E4E4;
+  --img-url: url(../../images/first-screen-image.png);
+--img-quotes: url(../../images/svg/quote-icon.svg);
+  --color-primary: var(--dark-blue, #262A3F);
+  --color-primary-rgba: var(--dark-blue-rgba, .8);
+  --color-secondary: var(--light-green);
+
+  --bg-primary: var(--white);
+  --bg-secondary: var(--dark);
+
+  --btn-color: var(--coral);
+  --rgba-btn-color: 241, 137, 123;
+  --arrow-url: url(../../images/svg/arrow2.svg);
+  --secondary-font: 'Playfair Display', serif;
+  --btn-toggle-bg: rgba(38, 42, 63, .3);
+  --swicher: url(../../images/svg/icon-moon.svg);
+  --icon-play: #262A3F;
+  --btn-play-bg: rgba(88, 98, 145, .3);
+
+  .theme-is-black {
+    --img-url: url(../../images/first-screen-image-dark.jpg);
+    --color-primary: var(--white);
+    --color-primary-rgba: var(--white-rgba, .8);
+    --bg-primary: var(--dark);
+    --light-gray: #515773;
+    --bg-secondary: var(--white);
+    --color-secondary: var(--light-blue);
+    --rgba-bg: 22, 25, 38;
+    --btn-color: var(--aquamarin);
+    --rgba-btn-color: 83, 243, 205;
+    --arrow-url: url(../../images/svg/arrow1.svg);
+    --btn-toggle-bg: rgba(255, 255, 255, .3);
+    --swicher: url(../../images/svg/sun-icon.svg);
+    --icon-play: #689FF2;
+    --btn-play-bg: rgba(104, 159, 242, .3);
+    --bg-border-input:255, 255, 255;
+    --img-quotes: url(../../images/svg/quote-icon-dark.svg);
+  }
+}
+
+// fonts
+$main-font: 'Lato', sans-serif;
+$secondary-font: 'Playfair Display', serif;
+
+//Colors
+$light-gray: #E4E4E4;
+
+// Screen Variables
+
+$xxs: '(max-width: 320px)';
+$xs: '(max-width: 540px)';
+$sm: '(max-width: 740px)';
+$md: '(max-width: 910px)';
+$lg: '(max-width: 1180px)';
+

@@ -1,0 +1,47 @@
+/*
+* Heading Helpers
+ */
+
+
+.heading {
+  font-family: $secondary-font;
+  line-height: 1.18;
+  font-weight: 400;
+  &_xl {
+  font-size: 44px;
+  }
+  &_lg{
+    font-size: 40px;
+  }
+  &_md{
+    font-size: 24px;
+  }
+}
+
+@include respond-to($lg){
+  .heading{
+    &_xl {
+      font-size: 30px;
+    }
+    &_lg{
+      font-size: 28px;
+    }
+    &_md{
+      font-size: 20px;
+    }
+  }
+}
+
+@include respond-to($md){
+  .heading{
+    &_xl {
+      font-size: 27px;
+    }
+    &_lg{
+      font-size: 24px;
+    }
+    &_md{
+      font-size: 18px;
+    }
+  }
+}
