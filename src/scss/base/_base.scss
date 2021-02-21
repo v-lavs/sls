@@ -1,0 +1,221 @@
+
+html {
+  //font: 300 18px/1.44 $main-font;
+}
+
+body {
+  color: rgba(var(--color-primary-rgba), .8);
+  background-color: var(--bg-primary);
+  font: 300 18px/1.44 $main-font;
+  transition: all .5s;
+
+  @include respond-to($lg) {
+    font-size: 16px;
+  }
+  @include respond-to($md) {
+    font-size: 14px;
+  }
+  @include respond-to($xs) {
+    font-size: 16px;
+  }
+  @include respond-to($xxs) {
+    text-align: center;
+  }
+}
+
+.d-flex {
+  display: flex;
+  @include respond-to($xs) {
+    flex-wrap: wrap;
+  }
+}
+
+.brd-bottom {
+  border-bottom: 2px solid rgba(255, 255, 255, .1);
+}
+
+.color_blue {
+  color: var(--color-secondary);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.sub-title {
+  font-weight: 300;
+  opacity: .8;
+}
+
+.dynamic-content {
+  p {
+    margin-bottom: 1.94em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    max-width: 715px;
+    width: 72%;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-image: var(--img-quotes);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      top: -35px;
+      left: -60px;
+      width: 100px;
+      height: 85px;
+    }
+  }
+
+  blockquote {
+    &:before {
+      top: -38px;
+      left: -45px;
+      width: 75px;
+    }
+
+    p {
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+  }
+
+
+  @include respond-to($lg) {
+    blockquote p {
+      font-size: 29px;
+    }
+    blockquote:before {
+      background-size: 75%;
+    }
+  }
+  @include respond-to($md) {
+    p {
+      font-size: 14px;
+    }
+    blockquote p {
+      font-size: 25px;
+    }
+  }
+  @include respond-to($xs) {
+    p {
+      font-size: 16px;
+    }
+    blockquote {
+      width: 90%;
+
+      &:before {
+        width: 84px;
+      }
+    }
+  }
+  @include respond-to($xxs) {
+    blockquote p {
+      font-size: 20px;
+    }
+  }
+}
+
+.blockquote {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 1px;
+  padding: 101px 0 101px 129px;
+  color: var(--white);
+
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  cite {
+    font-family: $secondary-font;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+  }
+
+  @include respond-to($lg) {
+    padding: 75px 0 80px 85px;
+    cite {
+      font-size: 18px;
+    }
+  }
+  @include respond-to($xxs) {
+    padding: 45px 0 50px 55px;
+    text-align: left;
+  }
+}
+
+.overlapping-blocks {
+  display: flex;
+
+  .part {
+    flex-shrink: 0;
+  }
+
+  .part_left {
+    width: 49.15%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  .part_right {
+    width: 67%;
+    transform: translateX(-22.5%);
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+
+  }
+
+  .block-info {
+    background-color: rgba(var(--rgba-bg), .9);
+  }
+
+  @include respond-to($md) {
+    .part_left {
+      width: 60%;
+    }
+    .part_right {
+      transform: translateX(-33%);
+      width: 65%;
+    }
+  }
+  @include respond-to($sm) {
+    .part {
+      width: 85%;
+    }
+    .part_right {
+      transform: translateX(-75%);
+    }
+  }
+  @include respond-to($xs) {
+    .part {
+      width: 100%;
+    }
+    .part_right {
+      transform: none;
+    }
+  }
+}
+
+
+
